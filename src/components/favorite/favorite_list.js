@@ -15,7 +15,6 @@ class FavoriteList extends Component {
         <FavoriteCity
           id={id}
           text={text}
-          checked={checked}
           onToggle={onToggle}
           onRemove={onRemove}
           key={id}

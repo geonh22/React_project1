@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchWeather } from '../actions/index';
+import { selectCity } from '../actions/index';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -27,13 +27,13 @@ class SearchBar extends Component {
         <div className='input-group mb-3'>
           <input 
             onChange={event => this.setState({term: event.target.value})}
-            type='text' className='form-control' placeholder='City' 
+            type='text' className='form-control' placeholder='지역을 입력해주세요' 
             value={this.state.term}
           />
           <div className='input-group-append'>
             <button className={clsName} type='button'>
               <i className='fa fa-spinner fa-spin' />
-              <span>Search</span>
+              <span>검색</span>
             </button>
           </div>
         </div>

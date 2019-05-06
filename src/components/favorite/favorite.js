@@ -5,7 +5,7 @@ const Favorite = ({form, children}) => {
   return (
     <main className="favorite-list-template">
       <div className="title">
-        오늘 할 일
+        즐겨 찾기
       </div>
       <section className="form-wrapper">
         {form}

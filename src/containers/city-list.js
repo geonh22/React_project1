@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { selectCity } from '../actions';
 import { bindActionCreators } from 'redux';
-import { fetchWeather } from '../actions/index';
-
+import './city-list';
 
 class CityList extends Component {
   renderList(cities) {
     return cities.map(city => (
-      <li 
-        key={city.title} 
+      <li
+        key={city.title}
         onClick={() => this.props.selectCity(city)}
         className='list-group-item'
       >
@@ -23,25 +22,23 @@ class CityList extends Component {
       return <div> No Cities </div>;
     }
     return (
-      <div>
-      <ul className='list-group '>
-        {this.renderList(this.props.cities)}  
-        
-      </ul>
-           
-      </div>
+        <div class="box">
+
+            {this.renderList(this.props.cities)}
+
+        </div>
     );
   }
 }
 
-function mapStateToProps({cities}) {
+function mapStateToProps({ cities }) {
   return {
     cities
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({selectCity}, dispatch);
+  return bindActionCreators({ selectCity }, dispatch);
 }
 export default connect(mapStateToProps, mapDispatchToProps)(CityList);
 

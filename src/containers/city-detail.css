@@ -1,0 +1,13 @@
+div .detail{
+    font-size:20px;
+}
+
+div .avg{
+    margin:20px;
+    border-radius:20px;
+    border:5px solid white;
+    font-size:25px;
+}
+.select{
+    font-size:30px;
+}
